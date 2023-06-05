@@ -7,6 +7,13 @@ base_url = 'https://api.github.com'
 repo_owner = 'freeCodeCamp'
 repo_name = 'freeCodeCamp'
 github_token = 'your-token'
+
+# Send email with summary
+msg = MIMEMultipart()
+msg['From'] = sender_email
+msg['To'] = recipient_email
+msg['Subject'] = f"Pull Request Summary for {repo_owner}/{repo_name}"
+msg.attach(MIMEText(summary, 'plain'))
 ```
 
 Before executing the code, ensure that you have the necessary libraries installed, such as requests, smtplib, and email. Also, enable "Less Secure Apps" in your sender email account settings if using Gmail as the SMTP server.
