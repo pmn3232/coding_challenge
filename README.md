@@ -6,9 +6,11 @@ Example: pip install requests
 
 If you don't want to send an email, you can comment the email sending section and simply print the details of the email that would be sent, like so:
 
+```python
 print(f"From: {sender_email}")
 print(f"To: {recipient_email}")
 print(f"Subject: Pull Request Summary for {repo_owner}/{repo_name}")
 print(f"Body:\n{summary}")
+```
 
 Remember to replace the placeholder values with your own repository details, email credentials, and recipient email address.
